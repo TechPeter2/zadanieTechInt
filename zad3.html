@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="Stylesheet" type="text/css" href="style.css"/>
+		<meta charset="UTF-8">
+		<title>Kalkulator zad3</title>
+	</head>
+	<body>
+	<div id="kalkulator">
+	<p>KALKULATOR</p>
+	<input type="text" id="display"><br>
+	<input type="button" class="button" value="1" onclick="dodajDo('1')">
+	<input type="button" class="button" value="2" onclick="dodajDo('2')">
+	<input type="button" class="button" value="3" onclick="dodajDo('3')">
+	<input type="button" class="button" value="-" onclick="dodajDo('-')"><br>
+	<input type="button" class="button" value="4" onclick="dodajDo('4')">
+	<input type="button" class="button" value="5" onclick="dodajDo('5')">
+	<input type="button" class="button" value="6" onclick="dodajDo('6')">
+	<input type="button" class="button" value="+" onclick="dodajDo('+')"><br>
+	<input type="button" class="button" value="7" onclick="dodajDo('7')">
+	<input type="button" class="button" value="8" onclick="dodajDo('8')">
+	<input type="button" class="button" value="9" onclick="dodajDo('9')">
+	<input type="button" class="button" value="*" onclick="dodajDo('*')"><br>
+	<input type="button" class="button" value="/" onclick="dodajDo('/')">
+	<input type="button" class="button" value="0" onclick="dodajDo('0')">
+	<input type="button" class="button" value="C" onclick="clean()">
+	<input type="button" class="button" value="=" onclick="wynik()"><br>
+	</div>
+	<script>
+		function dodajDo(value) {
+			var currentDisplay = document.getElementById("display");
+			currentDisplay.value += value;
+		}
+
+		function wynik() {
+			var currentDisplay = document.getElementById("display");
+			currentDisplay.value = eval(currentDisplay.value);
+		}
+
+		function clean() {
+			var currentDisplay = document.getElementById("display");
+			currentDisplay.value = '';
+		}
+	</script>
+	</body>
+</html>

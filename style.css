@@ -1,0 +1,15 @@
+#kalkulator{
+background-color:grey;
+text-align: center;
+border:3px solid;
+border-width:thin;
+}
+#display{
+	margin-size:5px;
+}
+.button{
+	margin:center;
+	display:inline-block;
+	font-size:17px;
+	padding:10px;
+}
