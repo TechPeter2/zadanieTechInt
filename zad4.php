@@ -30,7 +30,6 @@
 			Green<input type="checkbox" name="color[]" value="green">
 			Blue<input type="checkbox" name="color[]" value="blue">
 			Cyan<input type="checkbox" name="color[]" value="cyan">
-			</select><br>
 			Płeć: M<input type="radio" name="plec[]" value="M">
 			K<input type="radio" name="plec[]" value="K"><br>
 			Godzina:<input type="time" name="czas"><br>
