@@ -27,8 +27,18 @@ if (isset($_POST["p3"])) {
 		$imie = $_POST["imie"];
 		$nazwisko = $_POST["nazwisko"];
 		$wiek = $_POST["wiek"];
-		$sql = "UPDATE student SET imie='$imie', nazwisko='$nazwisko', wiek='$wiek' WHERE id=$id";
+		$sql = "UPDATE student SET imie=$imie, nazwisko=$nazwisko, wiek=$wiek WHERE id=$id";
 		$wynik2 = mysql_query($sql);
+		// Wyświetl formularz z polem tekstowym do aktualizacji
+        echo "<form action='zad5.php' method='post'>";
+        echo "<hr>";
+        echo "<input type='hidden' name='id'>";
+        echo "<input type='text' name='$imie'>";
+        echo "<input type='text' name='$nazwisko'>";
+        echo "<input type='text' name='$wiek'>";
+        echo "<input type='submit' name='ok' value='OK'>";
+        echo "<input type='submit' name='cancel' value='ANULUJ'>";
+        echo "</form>";
 }
 
 $sql = "SELECT * FROM student";
